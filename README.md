@@ -1,4 +1,4 @@
-# twig-anysort-and-alphasort
+# Twig anysort and alphasort
 **Lightweight Twig filters** to sort arrays and doctrine collections (nested objects): alphabetically, or by int, float, or DateTime.
 
 Just copy this file in your project, or simply copy the relevant filters and imports.
@@ -15,8 +15,10 @@ Or, if your Customer Entity has a lastActivity property: ```{% for customer in c
 
 Default order is ASC.
 
-For filtering in descending order, just add the Twig reverse filter.  
-e.g. ```{% for element in object.elements|anysort('key_name')|reverse %}```    
+For filtering in descending order, just add the Twig reverse filter. e.g. 
+```
+{% for element in object.elements|anysort('key_name')|reverse %}
+```    
 (or |reverse(true) to preserve the keys, if you really need that - then replace every usort in the file by uasort)
 
 alphasort filters only alphabetically (surprise), and is the primitive version of anysort. Delete if you don't need it.
