@@ -4,17 +4,21 @@
 Just copy this file in your project, or simply copy the relevant filters and imports.
 
 
-Usage: 
+###### Usage: 
 ```Twig
 {% for element in object.elements|anysort('key_name') %}
 ```
-Classic scenario: Suppose you want to filter the items in a shopping cart alphabetically, or by price.
+Classic scenario: Suppose you want to filter a shopping cart alphabetically, or by price.
 
-Or, if your Customer Entity has a lastActivity property: ```Twig {% for customer in customers|anysort('last_activity') %}```
+Or, if your Customer Entity has a lastActivity property: 
+```Twig
+{% for customer in customers|anysort('last_activity') %}
+```
 
 
 
-Default order is ASC. For filtering in descending order, just add the Twig reverse filter. e.g. 
+######Default order is ASC.
+For filtering in descending order, just add the Twig reverse filter. e.g. 
 ``` Twig
 {% for element in object.elements|anysort('key_name')|reverse %}
 ```    
