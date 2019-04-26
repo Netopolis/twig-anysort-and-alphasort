@@ -51,7 +51,7 @@ class AppExtension extends AbstractExtension
                 return $elements;
             }),
             /** Sorts arrays or objects (doctrine collection) by values: strings, integers, floats, or DateTimes
-             * Usage for element in object.elements|anysort('key_name')
+             * Usage: for element in object.elements|anysort('key_name')
              * For filtering in descending order, just add the reverse filter, e.g.
              * for element in object.elements|anysort('key_name')|reverse (or |reverse(true) to preserve the keys) */
             new TwigFilter('anysort', function($elements, $key = null) {
